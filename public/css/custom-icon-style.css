@@ -1,0 +1,120 @@
+a.link-icon:before,
+a.link-icon.link-file[href]:before {
+    content: "\f15b"; /* generic file icon */
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    width: 20px;
+    text-align: right;
+	margin-right: 10px;
+	font-family: "Font Awesome\ 5 Free";
+	font-style: normal;
+	font-weight: 900;
+	color: #C6E4F8;
+}
+a[href$=".txt"].link-icon:before,
+a.link-icon.link-text[href]:before {
+	content: "\f0f6"; /*Text*/
+}
+a[href$=".pdf"].link-icon:before,
+a.link-icon.link-pdf[href]:before {
+	content: "\f1c1"; /*PDF*/
+	color: #EB1C26;
+}
+a[href$=".doc"].link-icon:before,
+a[href$=".docx"].link-icon:before,
+a.link-icon.link-word[href]:before {
+	content: "\f1c2"; /*Word*/
+	color: #185ABD;
+}
+a[href$=".xls"].link-icon:before,
+a[href$=".xlsx"].link-icon:before,
+a.link-icon.link-excel[href]:before {
+	content: "\f1c3"; /*Excel*/
+	color: #207245;
+}
+a[href$=".ppt"].link-icon:before,
+a[href$=".pptx"].link-icon:before,
+a.link-icon.link-powerpoint[href]:before {
+	content: "\f1c4"; /*Powerpoint*/
+	color: #D24625;
+}
+a[href$=".gif"].link-icon:before,
+a[href$=".jpg"].link-icon:before,
+a[href$=".jpeg"].link-icon:before,
+a[href$=".png"].link-icon:before,
+a[href$=".bmp"].link-icon:before,
+a[href$=".tif"].link-icon:before,
+a.link-icon.link-image[href]:before {
+	content: "\f1c5"; /*Image*/
+	color: #FCBE0E;
+}
+a[href$=".zip"].link-icon:before,
+a[href$=".rar"].link-icon:before,
+a[href$=".gzip"].link-icon:before,
+a.link-icon.link-compressed[href]:before {
+	content: "\f1c6"; /*Compressed*/
+	color: #6C63FF;
+}
+
+/* Icon */
+.fa-file {
+	color: #C6E4F8;
+}
+
+.fa-file-signature {
+	color: #F85050;
+}
+
+.fa-clipboard-list {
+	color: var(--purple);
+}
+
+.fa-file-word {
+	color: #185ABD;
+}
+
+.fa-file-pdf {
+	color: #FF3C10;
+}
+
+.fa-file-powerpoint {
+	color: #D24625;
+}
+
+.fa-file-archive {
+	color: #4EB7DB;
+}
+
+.fa-bullhorn {
+	color: #ACE10F;
+}
+
+.fa-youtube {
+	color: #FF0000;
+}
+
+.fa-comment-dots {
+	color: #FCBE0E;
+}
+
+.fa-globe-americas {
+	color: #1DBC60;
+}
+
+.fa-minus-circle {
+	color: #FF9600;
+}
+
+.fa-check-circle {
+	color: #41AD49;
+}
+
+.folder-icon {
+	color: #FFD05B;
+	font-size:5rem;
+}

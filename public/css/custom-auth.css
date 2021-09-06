@@ -1,0 +1,13 @@
+.login-page-wrap {
+    position: relative;
+    height: auto;
+}
+
+.login-page-content {
+    padding: 0;
+    min-height: 100vh;
+}
+
+.login-page-content .login-box .login-form .form-group.mt-0 {
+    margin-bottom: 0!important;
+}
