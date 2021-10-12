@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TaskSubmissionFormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 
 class TaskSubmissionController extends Controller
 {
@@ -42,7 +43,7 @@ class TaskSubmissionController extends Controller
         }
 
         $submission_date = date('Y-m-d H:i:s');
-        $deadline = date('Y-m-d H:i:s', strtotime(Task::findOrFail($request->task_id)->deadline));
+        $deadline = Carbon::createFromFormat('l d F Y - H:i', Task::findOrFail($request->task_id)->deadline)->format('Y-m-d H:i:s');
 
         $status = ($submission_date < $deadline) ? 1 : 2;
         

@@ -17,22 +17,13 @@ class TaskSubmissionController extends Controller
     public function index(Task $task, $grade_id = null)
     {
         $grade = null;
-        $submissions = TaskSubmission::with('user')->addSelect([
-                                    'grade_id' => DB::table('users')
-                                                    ->join('grades','users.grade_id','=','grades.id')
-                                                    ->select('grades.id')
-                                                    ->limit(1),
-                                    'grade' => DB::table('users')
-                                                    ->join('grades','users.grade_id','=','grades.id')
-                                                    ->select('grades.name')
-                                                    ->limit(1)
-                                    ])
+        $submissions = TaskSubmission::with('user.grade')
                                     ->whereTaskId($task->id)
                                     ->get();
         
         if($grade_id != null)
         {
-            $submissions = $submissions->where('grade_id',$grade_id)->all();
+            $submissions = $submissions->where('user.grade_id',$grade_id)->all();
             $grade = Grade::findOrFail($grade_id)->name;
         }
 

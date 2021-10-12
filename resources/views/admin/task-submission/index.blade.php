@@ -98,7 +98,7 @@
                                         </td>
                                         <td>{{++$no}}</td>
                                         <td>{{$submission->user->name}}</td>
-                                        <td>{{$submission->grade}}</td>
+                                        <td>{{$submission->user->grade->name}}</td>
                                         <td>
                                             @if($submission->status == 1)
                                                 <span class="badge badge-pill badge-success">{{ __('label.on_time') }}</span>
